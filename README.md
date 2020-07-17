@@ -15,8 +15,8 @@ The Readme describes how to use the source code and the requirements, but unders
 ## 1. Requirements and Setup
 
 I used the following set of tools:
-- Node
-- PHP
+- Node.js 12
+- PHP 7.4
 - MySQL MariaDb
 - Gephi
 
