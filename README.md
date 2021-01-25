@@ -15,8 +15,8 @@ The Readme describes how to use the source code and the requirements, but unders
 ## 1. Requirements and Setup
 
 I used the following set of tools:
-- Node
-- PHP
+- Node.js 12
+- PHP 7.4
 - MySQL MariaDb
 - Gephi
 
@@ -36,15 +36,15 @@ The data collection uses several scripts. The Scopus APIs are limited in what th
 - scopusBibliography.js
 - citationsMatching.php
 
-1
+### 1
 
 Set up the `scopusSearch.js` with your API variables: API key and query. Set the database variables to match your own settings. Then run this script. If you expect more than 4 million results this script won't be sufficient.
 
-2
+### 2
 
 When the search script is done, run `cleanupScopusId.js` to normalise the Scopus ID of the collected publications. Make sure to enter your database connection before starting.
 
-3
+### 3
 
 Next up is `scopusBibliography.js`. Most of the collection work is in executing this script. The Scopus API limits API keys to 20.000 requests per week. For 100.000 publications you'd need at least 6 API keys to do it all at once, but this can be seen as malicious.
 
@@ -60,7 +60,7 @@ startAt, stopAt - the internal id's from the articles table. A range of up to 20
 
 API key - the API key you want to use for this instance
 
-4
+### 4
 
 `citationsMatching.php` finds internal references and adds them to the matches table. I wrote this quickly in PHP because everything in a single query was a bit much. I wanted a synchronous language, as it collects matches, enriches them and then adds them to the table. Run `queries/matchDuplicateFilter.sql` to clean any duplicates.
 
