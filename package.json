@@ -2,9 +2,9 @@
   "name": "bibliometric-network-analysis",
   "version": "1.0.0",
   "description": "This is a repository providing the source code used in investigating the network of the bibliometric record in privacy as offered by the Scopus API.",
-  "main": "src/scopusSearch.js",
+  "main": "scripts/scopusSearch.js",
   "scripts": {
-    "start": "src/scopusSearch.js",
+    "start": "scripts/scopusSearch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Friso van Dijk",
